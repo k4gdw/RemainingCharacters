@@ -1,0 +1,7 @@
+This is a jQuery plugin that adds a Twitter (tm) style  "characters remaining"
+display to an html text input element such as <input> or <textarea>.
+
+CHANGE HISTORY
+
+v0.1.0
+Project created. 3/15/2012 at half past six PM central time. -- Bryan Johns
