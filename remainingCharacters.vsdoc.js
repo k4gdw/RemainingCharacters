@@ -4,11 +4,11 @@
 * intended to be used only for design-time IntelliSense.  Please use the
 * standard jQuery library for all production use.
 *
-* Comment version: 1.0.1
+* Comment version: 2.0.0
 */
 
 /*!
-* remainingCharacters JavaScript Library v1.0.1
+* remainingCharacters JavaScript Library v2.0.0
 * http://github.com/k4gdw/jQuery.remainingCharacters
 *
 * Copyright 2012 K4GDW Software. All rights reserved.
@@ -40,27 +40,53 @@
 */
 
 (function ($) {
-	$.fn.remainingCharacters = function (target, maxChars) {
+	$.fn.remainingCharacters = function (args) {
 		/// <summary>
-		/// <para>
 		/// Accepts a string containing a CSS selector which is used to
 		/// identify the dom element to which the plugin is to be supplied.
 		/// It also expects a target for the output and an integer indicating
 		/// how many characters are to be allowed.
-		/// </para>
+		/// 
 		/// <para>When this plugin is applied to an input or textarea DOM
 		/// element and is supplied with an output target and character limit.
 		/// The user will be shown how many characters they can enter and be
 		/// prevented from entering more.
-		/// </para>
 		/// </summary>
-		/// <param name="target" type="Object">
-		///		A reference to the dom element to receive the output.
+		/// <param name="args" type="Object">
+		///	A javascript literal with various parameters to configure the
+		///	plugin.
+		///	<code>
+		///		{
+		///			target: output,
+		///			maxChars: 144,
+		///			hideTarget: true,
+		///			fadeTarget: {
+		///				fade: true,
+		///				speed: 'slow'
+		///		}
+		///	</code>
+		///	target:		A javascript object pointing to the DOM element that is
+		///				intended to catch the output (required)
+		///	maxChars:	An integer indicating how many characters to allow (required)
+		///	hideTarget:	a boolean indicating whether to hide the output target until
+		///				the the hosting textbox has focus, (optional, default: false)
+		///	fadeTarget: A javascript literal containing the following proerties:
+		///				fade:	boolean, optional, defaults to false
+		///				speed:	string, optional, defaults to 'fast'
 		/// </param>
-		/// <param name="maxChars" type="Integer">
-		///		How many characters are allowed.
-		/// </param>
+    	var target = args.target;
+    	var maxChars = args.maxChars;
+    	var hideTarget = args.hideTarget || false;
+    	var fadeTarget;
+    	var fadeSpeed;
+    	if(args.fadeTarget){
+    		fadeTarget = args.fadeTarget.fade || false;
+    		fadeSpeed = args.fadeTarget.speed || 'fast';
+    	}
     	$(target).html(maxChars + ' characters remaining.');
+    	if (hideTarget){
+    		$(target).hide();	
+    	}
         this.keyup(function() {
             $(target).html((maxChars - this.value.length) + ' characters remaining.');
         }).keydown(function(e) {
@@ -74,6 +100,20 @@
 					}
 				}
 				return true;
+        	}).focus(function(){        		
+        		if (fadeTarget){
+        			$(target).fadeIn(fadeSpeed);
+	        	} else {
+	        		$(target).show();
+	        	}
+        	}).blur(function(){
+        		if (hideTarget){
+        			if (fadeTarget){
+        				$(target).fadeOut(fadeSpeed);
+	        		} else {
+	        			$(target).hide();
+	        		}
+        		}
         	});	
         return this;
 	};
