@@ -1,4 +1,3 @@
-///C:\K4GDW.Projects\MICRS\Website\Scripts\jquery-1.7.1-vsdoc.js
 (function ($) {
     $.fn.remainingCharacters = function (target,maxChars) {
     	$(target).html(maxChars + ' characters remaining.');
