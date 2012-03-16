@@ -9,7 +9,7 @@
 						|| ((e.keyCode >= 186) && (e.keyCode <= 222)) 
 							|| e.keyCode == 32
 								|| e.keyCode == 9
-									|| e.keyCode == 13) {
+									|| ((e.keyCode == 13) && (this.tagName == 'textarea'))) {
 						return false;
 					}
 				}
