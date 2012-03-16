@@ -26,6 +26,10 @@ if it's appropriate.
 
 CHANGE HISTORY
 
+v1.0.1
+Fixing the issue where enter is disabled if the user hits the maximum number of
+characters.
+
 v1.0.0
 The plugin now takes a reference to the target  element to use for  displaying
 the number of characters remaining and how many characters to allow.   It also
