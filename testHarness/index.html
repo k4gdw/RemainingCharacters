@@ -1,0 +1,41 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title></title>
+	<meta name="description" content="jquery.remainingCharacters Test Harness">
+	<meta name="author" content="Bryan Johns">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/style.css">	
+	<script src="js/libs/jquery-1.7.1.min.js"></script>
+	<script src="js/remainingCharacters.js"></script>
+</head>
+<body>
+<header>
+
+</header>
+<div role="main">
+	<div style="padding: 20px;">
+		<div>Testing with a &lt;textarea&gt;</div>
+		<div id="charsLeftTarget1"></div>
+		<textarea rows="4" style="width: 100%;" id="charsLeft1"></textarea>
+	</div>
+	<div style="padding: 20px;">
+		<div>Testing with a &lt;input&gt;</div>		
+		<div id="charsLeftTarget2"></div>
+		<input id="charsLeft2" style="width: 100%;" />
+	</div>
+</div>
+<footer>
+
+</footer>
+
+<script type="text/javascript">
+	$().ready(function(){
+		$('#charsLeft1').remainingCharacters($('#charsLeftTarget1'),140);
+		$('#charsLeft2').remainingCharacters($('#charsLeftTarget2'),140);
+	});
+</script>
+</body>
+</html>
