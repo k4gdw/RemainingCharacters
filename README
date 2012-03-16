@@ -27,6 +27,11 @@ anyway.  However, it should still  be allowed on  <input> elements.  I need to
 figure out how to let the plugin  detect if it's an  <input> or <textarea> and
 handle the enter key appropriately.
 
+It's been tested against jQuery 1.7.1 and IT WORKS ON MY MACHINE.  If you find
+a bug, or know how to  fix the issue  I  mentioned  in the previous paragraph,
+feel free to fork it and submit a pull request.   I'll gladly check it out and
+merge if appropriate.
+
 CHANGE HISTORY
 
 v1.0.0
