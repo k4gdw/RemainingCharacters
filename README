@@ -1,7 +1,20 @@
 This is a jQuery plugin that adds a Twitter (tm) style  "characters remaining"
 display to an html text input element such as <input> or <textarea>.
 
+Right now, the only real problem I have with this plugin, and for me it's  not
+a show-stopper, is that if  the user  enters  exactly  the maximum  number  of
+characters, the enter key is disabled, preventing it from being used to submit
+the form.  If it's used on a <textarea> [enter] can't be used for that purpose
+anyway.  However, it should still  be allowed on  <input> elements.  I need to
+figure out how to let the plugin  detect if it's an  <input> or <textarea> and
+handle the enter key appropriately.
+
 CHANGE HISTORY
+
+v1.0.0
+The plugin now takes a reference to the target  element to use for  displaying
+the number of characters remaining and how many characters to allow.   It also
+restricts the user from actually entering too many characters.
 
 v0.1.0
 Project created. 3/15/2012 at half past six PM central time. -- Bryan Johns
