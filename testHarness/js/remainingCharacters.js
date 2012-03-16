@@ -1,6 +1,18 @@
 (function ($) {
-    $.fn.remainingCharacters = function (target,maxChars) {
+    $.fn.remainingCharacters = function (args) {
+    	var target = args.target;
+    	var maxChars = args.maxChars;
+    	var hideTarget = args.hideTarget || false;
+    	var fadeTarget;
+    	var fadeSpeed;
+    	if(args.fadeTarget){
+    		fadeTarget = args.fadeTarget.fade || false;
+    		fadeSpeed = args.fadeTarget.speed || 'fast';
+    	}
     	$(target).html(maxChars + ' characters remaining.');
+    	if (hideTarget){
+    		$(target).hide();	
+    	}
         this.keyup(function() {
             $(target).html((maxChars - this.value.length) + ' characters remaining.');
         }).keydown(function(e) {
@@ -14,6 +26,20 @@
 					}
 				}
 				return true;
+        	}).focus(function(){        		
+        		if (fadeTarget){
+        			$(target).fadeIn(fadeSpeed);
+	        	} else {
+	        		$(target).show();
+	        	}
+        	}).blur(function(){
+        		if (hideTarget){
+        			if (fadeTarget){
+        				$(target).fadeOut(fadeSpeed);
+	        		} else {
+	        			$(target).hide();
+	        		}
+        		}
         	});	
         return this;
 	};
