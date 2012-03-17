@@ -13,7 +13,15 @@ This html snippet shows how to apply the plugin to a <textarea> element:
 <textarea id="charsLeft"></textarea>
 <script type="text/javascript">
 	$().ready(function(){
-		$('#charsLeft').remainingCharacters($('#charsLeftTarget'),140);
+		$('#charsLeft').remainingCharacters({
+			target: output,
+			maxChars: 144,
+			hideTarget: true,
+			fadeTarget: {
+				fade: true,
+				speed: 'slow'
+			}
+		});
 	});
 </script>
 </body>
@@ -26,9 +34,17 @@ if it's appropriate.
 
 CHANGE HISTORY
 
+v2.0.0
+Added the ability to optionally hide the output and show it when the text  box
+receives focus, the hide it again when the user leaves the textbox.  This  was
+a major version bump because I was starting to need more  and more  parameters
+so it became easier to just accept on "args" parameter which is  a  javascript
+literal object as described above.   This  will  make  it  easier  to  add new
+parameters in future versions without breaking backward compatibility.
+
 v1.0.1
-Fixing the issue where enter is disabled if the user hits the maximum number of
-characters.
+Fixing the issue where enter is disabled  if the user  hits the maximum number
+of characters.
 
 v1.0.0
 The plugin now takes a reference to the target  element to use for  displaying
