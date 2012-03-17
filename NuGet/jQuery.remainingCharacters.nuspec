@@ -1,24 +1,26 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <version>1.0.1</version>
+    <version>2.0.0</version>
     <authors>Bryan Johns (K4GDW)</authors>
     <owners>K4GDW Software</owners>
     <licenseUrl>http://github.com/k4gdw/jQuery.remainingCharacters/wiki/License</licenseUrl>
     <projectUrl>http://github.com/k4gdw/jQuery.remainingCharacters</projectUrl>
     <dependencies>
-      <dependency id="jquery" version="1.0" />
+      <dependency id="jquery" version="1.0.0" />
     </dependencies>
     <id>jQuery.remainingCharacters</id>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>A really simple plugin that I created as a learning exercise. There may already be one or more jQuery plugins that accomplish the same thing in a better manner. If so, feel free to use them. If not, then I hope someone will find this one useful. Since I wrote this plugin primarily as a learning exercise that would actually give me a useful product, I welcome any pointers or suggestions.</description>
-    <releaseNotes>Created the NuGet package.</releaseNotes>
+    <description>A really simple plugin that limits an INPUT or TEXTAREA element to a specified number of characters and shows how many characters are remaining.</description>
+    <summary>I created this plugin as a learning exercise. There may already be one or more jQuery plugins that accomplish the same thing in a better manner. If so, feel free to use them. If not, then I hope someone will find this one useful. Since I wrote this plugin primarily as a learning exercise that would actually give me a useful product, I welcome any pointers or suggestions.</summary>
+    <releaseNotes>Added the option to hide the output by default and show it when the text box receives focus with or without fade.</releaseNotes>
     <copyright>Copyright 2012</copyright>
     <tags>jQuery Plugin</tags>
   </metadata>
   <files>
     <file src="..\LICENSE" target="content\Scripts\k4gdw\LICENSE" />
     <file src="..\remainingCharacters.js" target="content\Scripts\k4gdw\remainingCharacters.js" />
+    <file src="..\remainingCharacters.min.js" target="content\Scripts\k4gdw\remainingCharacters.min.js" />
     <file src="..\remainingCharacters.vsdoc.js" target="content\Scripts\k4gdw\remainingCharacters.vsdoc.js" />
   </files>
 </package>
