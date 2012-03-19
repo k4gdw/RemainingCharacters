@@ -29,8 +29,8 @@ This html snippet shows how to apply the plugin to a <textarea> element:
 
 It's been tested against jQuery 1.7.1 and IT WORKS ON MY MACHINE.  If you find
 a bug submit an issue.  If you know how to  fix an issue feel free to  fork it
-and  submit  a pull request.   I'll gladly check it out and merge if your code
-if it's appropriate.
+and  submit  a pull request.   I'll gladly check it out and merge your code if
+it's appropriate.
 
 CHANGE HISTORY
 
@@ -38,7 +38,7 @@ v2.0.0
 Added the ability to optionally hide the output and show it when the text  box
 receives focus, the hide it again when the user leaves the textbox.  This  was
 a major version bump because I was starting to need more  and more  parameters
-so it became easier to just accept on "args" parameter which is  a  javascript
+so it became easier to just accept an "args" parameter which is  a  javascript
 literal object as described above.   This  will  make  it  easier  to  add new
 parameters in future versions without breaking backward compatibility.
 
