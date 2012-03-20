@@ -1,5 +1,5 @@
 /*
-* remainingCharacters JavaScript Library v2.1.3
+* remainingCharacters JavaScript Library v2.1.6
 * http://github.com/k4gdw/jQuery.remainingCharacters
 *
 * Copyright 2012 K4GDW Software. All rights reserved.
@@ -51,8 +51,7 @@
 				if (((e.keyCode >= 48) && (e.keyCode <= 111))
 						|| ((e.keyCode >= 186) && (e.keyCode <= 222)) 
 							|| e.keyCode == 32
-								|| e.keyCode == 9
-									|| ((e.keyCode == 13) && (this.tagName == 'TEXTAREA'))) {
+								|| ((e.keyCode == 13) && (this.tagName == 'TEXTAREA'))) {
 						return false;
 					}
 				}
