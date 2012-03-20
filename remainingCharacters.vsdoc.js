@@ -77,6 +77,7 @@
     	var target = args.target;
     	var maxChars = args.maxChars;
     	var hideTarget = args.hideTarget || false;
+    	var current = this.val() || '';
     	var fadeTarget;
     	var fadeSpeed;
     	if(args.fadeTarget){

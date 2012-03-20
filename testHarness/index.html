@@ -19,7 +19,7 @@
 	<div style="padding: 20px;">
 		<div style="float: left;">Testing with a &lt;textarea&gt; and hideTarget defaulting to false.</div>
 		<div id="charsLeftTarget1" style="float: right;"></div>
-		<textarea rows="4" style="width: 100%;clear: both;" id="charsLeft1"></textarea>
+		<textarea rows="4" style="width: 100%;clear: both;" id="charsLeft1">test</textarea>
 	</div>
 	<div style="padding: 20px;">
 		<div style="float: left;">Testing with a &lt;input&gt; and hideTarget=true fadeTarget=default</div>		
@@ -35,6 +35,11 @@
 		<div style="float: left;">Testing with a &lt;input&gt; hideTarget=true fadeTarget(fade=true, speed=default)</div>		
 		<div id="charsLeftTarget4" style="float: right;"></div>
 		<input id="charsLeft4" style="width: 100%;clear: both;" />
+	</div>
+	<div style="padding: 20px;">
+		<div style="float: left;">Existing data in textbox.</div>		
+		<div id="charsLeftTarget5" style="float: right;"></div>
+		<input id="charsLeft5" style="width: 100%;clear: both;" value="15 CharactersXX" />
 	</div>
 </div>
 <footer>
@@ -63,6 +68,14 @@
 		});
 		$('#charsLeft4').remainingCharacters({
 			target: $('#charsLeftTarget4'),
+			maxChars: 144,
+			hideTarget: true,
+			fadeTarget: {
+				fade: true
+			}
+		});
+		$('#charsLeft5').remainingCharacters({
+			target: $('#charsLeftTarget5'),
 			maxChars: 144,
 			hideTarget: true,
 			fadeTarget: {
