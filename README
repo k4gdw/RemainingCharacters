@@ -34,6 +34,11 @@ it's appropriate.
 
 CHANGE HISTORY
 
+v2.1.0
+Changed the NuGet package to install the latest jQuery  instead  of  using the
+complicated dependency resolution system NuGet uses by default.   Also added a
+minified version.
+
 v2.0.0
 Added the ability to optionally hide the output and show it when the text  box
 receives focus, the hide it again when the user leaves the textbox.  This  was
