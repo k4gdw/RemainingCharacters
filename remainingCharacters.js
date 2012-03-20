@@ -39,7 +39,7 @@
     		fadeTarget = args.fadeTarget.fade || false;
     		fadeSpeed = args.fadeTarget.speed || 'fast';
     	}
-    	$(target).html(maxChars + ' characters remaining.');
+    	$(target).html((maxChars - this.value.length) + ' characters remaining.');
     	if (hideTarget){
     		$(target).hide();	
     	}
