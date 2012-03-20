@@ -4,11 +4,11 @@
 * intended to be used only for design-time IntelliSense.  Please use the
 * standard jQuery library for all production use.
 *
-* Comment version: 2.1.4
+* Comment version: 2.1.5
 */
 
 /*
-* remainingCharacters JavaScript Library v2.1.4
+* remainingCharacters JavaScript Library v2.1.5
 * http://github.com/k4gdw/jQuery.remainingCharacters
 *
 * Copyright 2012 K4GDW Software. All rights reserved.
@@ -84,7 +84,7 @@
     		fadeTarget = args.fadeTarget.fade || false;
     		fadeSpeed = args.fadeTarget.speed || 'fast';
     	}
-    	$(target).html(maxChars + ' characters remaining.');
+    	$(target).html((maxChars - current.length) + ' characters remaining.');
     	if (hideTarget){
     		$(target).hide();	
     	}

@@ -34,6 +34,9 @@ it's appropriate.
 
 CHANGE HISTORY
 
+v2.1.5
+Missed moving some of the 2.1.4 changes into the vsdoc file.
+
 v2.1.4
 Fixed the incorrect initialization issue, for real this time.
 
