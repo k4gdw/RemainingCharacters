@@ -34,6 +34,9 @@ it's appropriate.
 
 CHANGE HISTORY
 
+v2.1.3
+Fixed the incorrect initialization issue, for real this time.
+
 v2.1.2
 Rolling back the "fix" applied in v2.1.1.  It broke something and I'm not sure
 what.
