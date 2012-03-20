@@ -10,31 +10,73 @@
 <body>
 <div id="wrapper">
 	<div id="body">
-		<div class="prose">
+		<div id="header">
 			<h1>jQuery.remainingCharacters</h1>
 			<p>This page shows the remainingCharacters plugin running in various configurations.</p>
-			<div class="demo">
-				<p>This is the way it works with minimum configuration.</p>			
-				<div id="defaultTarget" class="target"></div>
-				<input id="default" style="width: 100%;" />
-			</div>
-			<div class="demo">
-				<p></p>
-				<div id="oneTarget" class="target"></div>
-				<input id="one" style="width: 100%;" />
-
-			</div>
 		</div>
+		<div class="demo">
+			<p>This is the way it works with minimum configuration.</p>		
+			<pre>
+&lt;div id="output" class="target"&lt;&gt;/div&gt;
+&lt;input id="textbox" style="width: 100%;" /&gt;
+&lt;script type="text/javascript"&gt;
+	$().ready(function(){
+		$('#textbox').remainingCharacters({
+			target: $('div#output'),
+			maxChars: 140
+		});
+&lt;/script&gt;
+</pre>	
+			<div id="output1" class="target"></div>
+			<input id="textbox1" style="width: 100%;" />
+		</div>
+		<div class="demo">
+			<p>
+				This shows how the plugin works with the optional parameters set.
+			</p>
+			<p>
+				<ul>
+					<li>hideTarget: true</li>
+					<li>fadeTarget:
+						<ul>
+							<li>fade: true</li>
+							<li>speed: slow</li>
+						</ul>
+					</li>
+				</ul>
+			</p>
+			<p>The output is hidden until the input box has focus, at which point it fades in, and it fades out when the textbox loses focus.</p>
+<pre>
+&lt;div id="output2" class="target"&gt;&lt;/div&gt;
+&lt;input id="textbox2" style="width: 100%;" /&gt;
+&lt;script type="text/javascript"&gt;
+	$().ready(function(){
+		$('#textbox2').remainingCharacters({
+			target: $('#output2'),
+			maxChars: 140,
+			hideTarget: true,
+			fadeTarget: {
+				fade: true,
+				speed: 'slow'
+			}
+		});
+&lt;/script&gt;
+
+</pre>
+			<div id="output2" class="target"></div>
+			<input id="textbox2" style="width: 100%;" />
+		</div>
+		<div id="footer"></div>
 	</div>
 </div>
 <script type="text/javascript">
 	$().ready(function(){
-		$('#default').remainingCharacters({
-			target: $('#defaultTarget'),
+		$('#textbox1').remainingCharacters({
+			target: $('#output1'),
 			maxChars: 140
 		});
-		$('#one').remainingCharacters({
-			target: $('#oneTarget'),
+		$('#textbox2').remainingCharacters({
+			target: $('#output2'),
 			maxChars: 140,
 			hideTarget: true,
 			fadeTarget: {

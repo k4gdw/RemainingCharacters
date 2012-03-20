@@ -31,9 +31,10 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color: teal;
 }
 ol, ul {
-	list-style: none;
+	list-style: circle;
 }
 blockquote, q {
 	quotes: none;
@@ -60,12 +61,8 @@ table {
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-.prose {
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	padding: 20px;
 	background-color: white;
 }
@@ -79,6 +76,8 @@ table {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 20px;
+	position: relative;
+
 }
 
 #footer {	
@@ -86,18 +85,24 @@ table {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 20px;
+	position: relative;
+	clear: both;
 }
 
 .demo {
 	background-color: white;
-	padding: 10px;
-	width: 50%;
 	float: left;
+	position: relative;
+	padding: 25px;
+	text-align: left;
+	border: thin teal solid;
+	overflow: auto;
+	max-width: 45%;
+	margin-right: 10px;
 }
 
-p{
+p {
 	padding: 10px;
-	text-align: justify;
 }
 h1 {
 	font-style: normal;
