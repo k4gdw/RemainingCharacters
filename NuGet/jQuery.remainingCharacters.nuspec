@@ -7,7 +7,7 @@
     <licenseUrl>http://github.com/k4gdw/jQuery.remainingCharacters/wiki/License</licenseUrl>
     <projectUrl>http://github.com/k4gdw/jQuery.remainingCharacters</projectUrl>
     <dependencies>
-      <dependency id="jquery" version="1.0.0" />
+      <dependency id="jquery" />
     </dependencies>
     <id>jQuery.remainingCharacters</id>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
