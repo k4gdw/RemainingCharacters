@@ -1,5 +1,5 @@
 /*
-* remainingCharacters JavaScript Library v2.1.3
+* remainingCharacters JavaScript Library v2.1.4
 * http://github.com/k4gdw/jQuery.remainingCharacters
 *
 * Copyright 2012 K4GDW Software. All rights reserved.
