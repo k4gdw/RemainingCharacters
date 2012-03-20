@@ -34,6 +34,12 @@ it's appropriate.
 
 CHANGE HISTORY
 
+v2.1.7
+The vsdoc intellisense is improved.  Not perfect, but much better.
+
+v2.1.6
+Fixed bug that prevented user from tabbing off of a filled up textbox.
+
 v2.1.5
 Missed moving some of the 2.1.4 changes into the vsdoc file.
 

@@ -4,11 +4,11 @@
 * intended to be used only for design-time IntelliSense.  Please use the
 * standard jQuery library for all production use.
 *
-* Comment version: 2.1.6
+* Comment version: 2.1.7
 */
 
 /*
-* remainingCharacters JavaScript Library v2.1.6
+* remainingCharacters JavaScript Library v2.1.7
 * http://github.com/k4gdw/jQuery.remainingCharacters
 *
 * Copyright 2012 K4GDW Software. All rights reserved.
@@ -40,30 +40,18 @@
 (function ($) {
 	$.fn.remainingCharacters = function (args) {
 		/// <summary>
-		/// Accepts a string containing a CSS selector which is used to
-		/// identify the dom element to which the plugin is to be supplied.
-		/// It also expects a target for the output and an integer indicating
-		/// how many characters are to be allowed.
-		/// 
-		/// <para>When this plugin is applied to an input or textarea DOM
-		/// element and is supplied with an output target and character limit.
-		/// The user will be shown how many characters they can enter and be
-		/// prevented from entering more.
-		/// </summary>
-		/// <param name="args" type="Object">
-		///	A javascript literal with various parameters to configure the
-		///	plugin.
-		///	<code>
-		///		{
-		///			target: output,
-		///			maxChars: 144,
-		///			hideTarget: true,
-		///			fadeTarget: {
-		///				fade: true,
-		///				speed: 'slow'
-		///				}
+		///	A javascript literal with various parameters to configure the plugin.
+		///
+		/// {
+		///	target: output,
+		///	maxChars: 144,
+		///	hideTarget: true,
+		///	fadeTarget: {
+		///		fade: true,
+		///		speed: 'slow'
 		///		}
-		///	</code>
+		/// }
+		///
 		///	target:		A javascript object pointing to the DOM element that is
 		///				intended to catch the output (required)
 		///	maxChars:	An integer indicating how many characters to allow (required)
@@ -73,7 +61,7 @@
 		///				fade:	boolean, optional, defaults to false
 		///				speed:	string, optional, defaults to 'fast'  This value can be
 		///						any value supported by jQuery's .fadeOut.
-		/// </param>
+		/// </summary>
     	var target = args.target;
     	var maxChars = args.maxChars;
     	var hideTarget = args.hideTarget || false;
