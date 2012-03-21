@@ -15,7 +15,7 @@ This html snippet shows how to apply the plugin to a <textarea> element:
 	$().ready(function(){
 		$('#charsLeft').remainingCharacters({
 			target: output,
-			maxChars: 144,
+			maxChars: 140,
 			hideTarget: true,
 			fadeTarget: {
 				fade: true,
@@ -33,6 +33,22 @@ and  submit  a pull request.   I'll gladly check it out and merge your code if
 it's appropriate.
 
 CHANGE HISTORY
+
+v2.2.0
+Made the target parameter optional.  If it's not supplied, a <span> is created
+and inserted into the DOM and used as the target.
+
+	<span id='rcOutput' style="float: right;"></span>
+
+For this to work properly, the textbox the plugin is applied to needs to be inside
+some other container such as a <div> or <td>.  Otherwise, when the <span> is
+inserted and floated, it'll not be in a useful location.  Also, if the textbox is
+the only element inside that container when the <span> is hidden or revealed via
+the hideTarget/fadeTarget properties, it'll jump around.  The same thing will 
+happen if the container isn't wide enough for the <span> to fit without wrapping.
+
+TODO:  Figure out how to generate the output as a floating div with an absolute
+position relative to the textbox.
 
 v2.1.7
 The vsdoc intellisense is improved.  Not perfect, but much better.

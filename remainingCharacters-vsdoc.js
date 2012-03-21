@@ -4,11 +4,11 @@
 * intended to be used only for design-time IntelliSense.  Please use the
 * standard jQuery library for all production use.
 *
-* Comment version: 2.1.6
+* Comment version: 2.2.0
 */
 
 /*
-* remainingCharacters JavaScript Library v2.1.6
+* remainingCharacters JavaScript Library v2.2.0
 * http://github.com/k4gdw/jQuery.remainingCharacters
 *
 * Copyright 2012 K4GDW Software. All rights reserved.
@@ -53,7 +53,10 @@
 		/// }  
 		///  
 		/// target:		A javascript object pointing to the DOM element that is  
-		///				intended to catch the output (required)  
+		///				intended to catch the output (optional)  
+		///				If this property is not supplied, a span will be generated and  
+		///				and inserted into the DOM before the textbox and with css set to  
+		///				float: right;
 		/// maxChars:	An integer indicating how many characters to allow (required)  
 		/// hideTarget:	a boolean indicating whether to hide the output target until  
 		///				the the hosting textbox has focus, (optional, default: false)  
@@ -62,7 +65,10 @@
 		///				speed:	string, optional, defaults to 'fast'  This value can be  
 		///						any value supported by jQuery's .fadeOut.  
 		/// </summary>
-    	var target = args.target;
+    	var target = args.target || $('<span>', {
+    			id: 'rcOutput',
+    			style: 'float: right;'
+    		}).insertBefore(this);
     	var maxChars = args.maxChars;
     	var hideTarget = args.hideTarget || false;
     	var current = this.val() || '';
@@ -72,10 +78,10 @@
     		fadeTarget = args.fadeTarget.fade || false;
     		fadeSpeed = args.fadeTarget.speed || 'fast';
     	}
-    	$(target).html((maxChars - current.length) + ' characters remaining.');
     	if (hideTarget){
     		$(target).hide();	
     	}
+    	$(target).html((maxChars - current.length) + ' characters remaining.');
         this.keyup(function() {
             $(target).html((maxChars - this.value.length) + ' characters remaining.');
         }).keydown(function(e) {
@@ -91,6 +97,7 @@
         	}).focus(function(){        		
         		if (fadeTarget){
         			$(target).fadeIn(fadeSpeed);
+        			$(target).html((maxChars - this.value.length) + ' characters remaining.');
 	        	} else {
 	        		$(target).show();
 	        	}
