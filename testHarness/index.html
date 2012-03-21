@@ -36,10 +36,13 @@
 		<div id="charsLeftTarget4" style="float: right;"></div>
 		<input id="charsLeft4" style="width: 100%;clear: both;" />
 	</div>
-	<div style="padding: 20px;">
-		<div style="float: left;">Existing data in textbox.</div>		
-		<div id="charsLeftTarget5" style="float: right;"></div>
-		<input id="charsLeft5" style="width: 100%;clear: both;" value="15 CharactersXX" />
+	<div style="padding: 10px; width: 300px; float: left; margin-right: 10px;">
+		<span style="float: left;">inserted target</span>		
+		<input id="charsLeft5" style="width: 100%;clear: both;" />
+	</div>
+	<div style="padding: 10px; width: 300px; float: left; margin-right: 10px;">
+		<span style="float: left;">inserted target 2.</span>		
+		<input id="charsLeft6" style="width: 100%;clear: both;" />
 	</div>
 </div>
 <footer>
@@ -75,7 +78,13 @@
 			}
 		});
 		$('#charsLeft5').remainingCharacters({
-			target: $('#charsLeftTarget5'),
+			maxChars: 15,
+			hideTarget: true,
+			fadeTarget: {
+				fade: true
+			}
+		});
+		$('#charsLeft6').remainingCharacters({
 			maxChars: 15,
 			hideTarget: true,
 			fadeTarget: {

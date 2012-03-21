@@ -1,5 +1,5 @@
 /*
-* remainingCharacters JavaScript Library v2.1.6
+* remainingCharacters JavaScript Library v2.2.0
 * http://github.com/k4gdw/jQuery.remainingCharacters
 *
 * Copyright 2012 K4GDW Software. All rights reserved.
@@ -30,7 +30,10 @@
 */
 (function ($) {
     $.fn.remainingCharacters = function (args) {
-    	var target = args.target;
+    	var target = args.target || $('<span>', {
+    			id: 'rcOutput',
+    			style: 'float: right;'
+    		}).insertBefore(this);
     	var maxChars = args.maxChars;
     	var hideTarget = args.hideTarget || false;
     	var current = this.val() || '';
