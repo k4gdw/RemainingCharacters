@@ -12,16 +12,17 @@ This html snippet shows how to apply the plugin to a `<textarea>` element:
             <div id="charsLeftTarget"></div>
             <textarea id="charsLeft"></textarea>
             <script type="text/javascript">
-    	    $().ready(function(){
-    		$('#charsLeft').remainingCharacters({
-    			target: output,
-    			maxChars: 140,
-    			hideTarget: true,
-    			fadeTarget: {
-    				fade: true,
-    				speed: 'slow'
-    			}
-    		    });
+    	        $().ready(function(){
+    		        $('#charsLeft').remainingCharacters({
+    			    target: output,
+    			    targetStyle: 'whatever css you want',
+    			    maxChars: 140,
+    			    hideTarget: true,
+    			    fadeTarget: {
+    				    fade: true,
+    				    speed: 'slow'
+    			    }
+    		      });
     	        });
             </script>
         </body>
@@ -33,9 +34,15 @@ It's been tested against [jQuery](http://jquery.com/) 1.7.1 and **IT WORKS ON MY
 
 **TODO:**  Figure out how to generate the output as a floating `<div>` with an absolute position relative to the textbox so that it is outside the regular page flow, allowing so that the `<input>` or `<textarea>` it's applied to doesn't jump around when the output `<div>` visibility is toggled.
 
-v2.2.3
--------
-Changed the vsdoc file to an intellisense file and updated the nuget package.  I've been dog-fooding this version for a little while now so I think it's ready for general release.  
+v2.3.0
+------
+Added a new configuration property targetStyle which allows the user
+to apply styling to the runtime generated `<div>`.  This new property
+will allow quite a bit of flexibility.
+
+It's now been tested with jQuery 1.8.2.
+
+Changed the vsdoc file to an intellisense file and updated the nuget package.
 
 v2.2.2b
 --------

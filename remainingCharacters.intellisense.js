@@ -4,11 +4,11 @@
 * intended to be used only for design-time IntelliSense.  Please use the
 * standard jQuery library for all production use.
 *
-* Comment version: 2.2.3
+* Comment version: 2.3.0
 */
 
 /*
-* remainingCharacters JavaScript Library v2.2.3
+* remainingCharacters JavaScript Library v2.3.0
 * http://github.com/k4gdw/jQuery.remainingCharacters
 *
 * Copyright 2012 K4GDW Software. All rights reserved.
@@ -43,7 +43,8 @@
 		///	A javascript literal with various parameters to configure the plugin.
 		///  
 		/// {  
-		///	target: output,  
+		///	target: output,
+		/// targetStyle = 'whatever css you see fit to experiment with',
 		///	maxChars: 144,  
 		///	hideTarget: true,  
 		///	fadeTarget: {  
@@ -52,22 +53,26 @@
 		///		}  
 		/// }  
 		///  
-		/// target:		A javascript object pointing to the DOM element that is  
-		///				intended to catch the output (optional)  
-		///				If this property is not supplied, a span will be generated and  
-		///				and inserted into the DOM before the textbox and with css set to  
-		///				float: right;
-		/// maxChars:	An integer indicating how many characters to allow (required)  
-		/// hideTarget:	a boolean indicating whether to hide the output target until  
-		///				the the hosting textbox has focus, (optional, default: false)  
-		/// fadeTarget: A javascript literal containing the following proerties:  
-		///				fade:	boolean, optional, defaults to false  
-		///				speed:	string, optional, defaults to 'fast'  This value can be  
-		///						any value supported by jQuery's .fadeOut.  
+		/// target:		  A javascript object pointing to the DOM element that is  
+		///				  intended to catch the output (optional)  
+		///				  If this property is not supplied, a div will be generated and  
+		///				  and inserted into the DOM before the textbox and with css set to  
+		///				  targetStyle (if supplied) or width equal to the width of the <input>
+		///               or <textarea> and text-align: right;
+		/// targetStyle:  Optional property that contains css style to apply to the target.
+		/// maxChars:	  An integer indicating how many characters to allow (required)  
+		/// hideTarget:	  a boolean indicating whether to hide the output target until  
+		///				  the the hosting textbox has focus, (optional, default: false)  
+		/// fadeTarget:   A javascript literal containing the following proerties:  
+		///				  fade: 	boolean, optional, defaults to false  
+		///				  speed:	string, optional, defaults to 'fast'  This value can be  
+		///						    any value supported by jQuery's .fadeOut.  
 		/// </summary>
-    	var target = args.target || $('<span>', {
+		var targetWidth = $(this).outerWidth();
+		var targetStyle = args.targetStyle || 'width: ' + targetWidth + 'px; text-align: right;';
+    	var target = args.target || $('<div>', {
     			id: 'rcOutput',
-    			style: 'float: right;'
+    			style: targetStyle
     		}).insertBefore(this);
     	var maxChars = args.maxChars;
     	var hideTarget = args.hideTarget || false;
