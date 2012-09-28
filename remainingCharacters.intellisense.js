@@ -4,11 +4,11 @@
 * intended to be used only for design-time IntelliSense.  Please use the
 * standard jQuery library for all production use.
 *
-* Comment version: 2.2.0
+* Comment version: 2.2.3
 */
 
 /*
-* remainingCharacters JavaScript Library v2.2.0
+* remainingCharacters JavaScript Library v2.2.3
 * http://github.com/k4gdw/jQuery.remainingCharacters
 *
 * Copyright 2012 K4GDW Software. All rights reserved.

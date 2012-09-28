@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <version>2.2.1-beta</version>
+    <version>2.2.3</version>
     <authors>Bryan Johns (K4GDW)</authors>
     <owners>K4GDW Software</owners>
     <licenseUrl>http://github.com/k4gdw/jQuery.remainingCharacters/wiki/License</licenseUrl>
@@ -21,7 +21,7 @@
     <file src="..\LICENSE" target="content\App_Readme\k4gdw\remainingCharacters\LICENSE" />
     <file src="..\remainingCharacters.js" target="content\Scripts\k4gdw\remainingCharacters.js" />
     <file src="..\remainingCharacters.min.js" target="content\Scripts\k4gdw\remainingCharacters.min.js" />
-    <file src="..\remainingCharacters-vsdoc.js" target="content\Scripts\k4gdw\remainingCharacters-vsdoc.js" />
+    <file src="..\remainingCharacters.intellisense.js" target="content\Scripts\k4gdw\remainingCharacters.intellisense.js" />
 	<file src="..\README.md" target="content\App_Readme\k4gdw\remainingCharacters\README.md" />
   </files>
 </package>

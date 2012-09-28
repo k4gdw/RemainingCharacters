@@ -33,7 +33,11 @@ It's been tested against [jQuery](http://jquery.com/) 1.7.1 and **IT WORKS ON MY
 
 **TODO:**  Figure out how to generate the output as a floating `<div>` with an absolute position relative to the textbox so that it is outside the regular page flow, allowing so that the `<input>` or `<textarea>` it's applied to doesn't jump around when the output `<div>` visibility is toggled.
 
-v2.2.1
+v2.2.3
+-------
+Changed the vsdoc file to an intellisense file and updated the nuget package.  I've been dog-fooding this version for a little while now so I think it's ready for general release.  
+
+v2.2.2b
 --------
 Changed this file from a plain README file to README.md so it has decent formatting.
 

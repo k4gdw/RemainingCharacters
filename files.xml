@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+	<output path="remainingCharacters.min.js">
+		<input path="remainingCharacters.js" />
+	</output>
+</root>
