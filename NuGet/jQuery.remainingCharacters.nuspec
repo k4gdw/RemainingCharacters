@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <version>2.2.0-beta</version>
+    <version>2.2.1-beta</version>
     <authors>Bryan Johns (K4GDW)</authors>
     <owners>K4GDW Software</owners>
     <licenseUrl>http://github.com/k4gdw/jQuery.remainingCharacters/wiki/License</licenseUrl>
@@ -13,14 +13,15 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A really simple plugin that limits an INPUT or TEXTAREA element to a specified number of characters and shows how many characters are remaining.</description>
     <summary>I created this plugin as a learning exercise. There may already be one or more jQuery plugins that accomplish the same thing in a better manner. If so, feel free to use them. If not, then I hope someone will find this one useful. Since I wrote this plugin primarily as a learning exercise that would actually give me a useful product, I welcome any pointers or suggestions.</summary>
-    <releaseNotes>Fixed a bug that caused an incorrect count to be displayed when a textbox already has content in it before the user starts typing.</releaseNotes>
+    <releaseNotes>Changed README to README.md and updated the nuget package to install it an the license into App_Readme\k4gdw\remainingCharacters\.</releaseNotes>
     <copyright>Copyright 2012</copyright>
     <tags>jQuery Plugin</tags>
   </metadata>
   <files>
-    <file src="..\LICENSE" target="content\Scripts\k4gdw\LICENSE" />
+    <file src="..\LICENSE" target="content\App_Readme\k4gdw\remainingCharacters\LICENSE" />
     <file src="..\remainingCharacters.js" target="content\Scripts\k4gdw\remainingCharacters.js" />
     <file src="..\remainingCharacters.min.js" target="content\Scripts\k4gdw\remainingCharacters.min.js" />
     <file src="..\remainingCharacters-vsdoc.js" target="content\Scripts\k4gdw\remainingCharacters-vsdoc.js" />
+	<file src="..\README.md" target="content\App_Readme\k4gdw\remainingCharacters\README.md" />
   </files>
 </package>
