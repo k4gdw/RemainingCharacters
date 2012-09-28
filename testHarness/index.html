@@ -8,7 +8,7 @@
 	<meta name="author" content="Bryan Johns">
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="css/style.css">	
-	<script src="js/libs/jquery-1.8.1.min.js"></script>
+	<script src="js/libs/jquery-1.8.2.min.js"></script>
 	<script src="js/remainingCharacters.js"></script>
 </head>
 <body>
@@ -85,6 +85,7 @@
 			}
 		});
 		$('#charsLeft6').remainingCharacters({
+			targetStyle: 'clear: both; text-align: left; color: red; font-weight: bold; font-size: 2em;',
 			maxChars: 15,
 			hideTarget: true,
 			fadeTarget: {
