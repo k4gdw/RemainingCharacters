@@ -1,17 +1,17 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!DOCTYPE html>
+<html>
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <title>jQuery.remainingCharacters</title>
 <link rel="stylesheet" type="text/css" href="css/site.css"/>
-<script src="http://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/jquery-1.8.2.min.js""></script>
 <script type="text/javascript">
 		if (typeof jQuery == 'undefined')
 		{
 			document.write(unescape("%3Cscript src='js/jquery-1.7.1.min.js' type='text/javascript'%3E%3C/script%3E"));
 		}
 	</script>
-<script src="js/remainingCharacters.min.js" type="text/javascript"></script>
+<script src="js/remainingCharacters.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -28,7 +28,6 @@
 &lt;script type="text/javascript"&gt;
 	$().ready(function(){
 		$('#textbox').remainingCharacters({
-			target: $('div#output'),
 			maxChars: 140
 		});
 &lt;/script&gt;
@@ -71,8 +70,79 @@
 </pre>
 			<div id="output2" class="target"></div>
 			<input id="textbox2" style="width: 100%;" />
+		</div><div class="demo">
+			<p>
+				This shows how the plugin works with the optional parameters set and the
+				output rendered at run time in a span instead of being specified at
+				design time.
+			</p>
+			<p>
+				<ul>
+					<li>hideTarget: true</li>
+					<li>fadeTarget:
+						<ul>
+							<li>fade: true</li>
+							<li>speed: slow</li>
+						</ul>
+					</li>
+				</ul>
+			</p>
+			<p>The output is hidden until the input box has focus, at which point it fades in, and it fades out when the textbox loses focus.</p>
+<pre>
+&lt;input id="textbox3" style="width: 100%;" /&gt;
+&lt;script type="text/javascript"&gt;
+	$().ready(function(){
+		$('#textbox3').remainingCharacters({
+			maxChars: 140,
+			hideTarget: true,
+			fadeTarget: {
+				fade: true,
+				speed: 'slow'
+			}
+		});
+&lt;/script&gt;
+
+</pre>
+			<input id="textbox3" style="width: 100%;" />
 		</div>
-		<div id="footer"></div>
+		<div class="demo">
+			<p>
+				This shows how the plugin works with the optional parameters set and the
+				output rendered at run time in a span instead of being specified at
+				design time.
+			</p>
+			<p>
+				<ul>
+					<li>hideTarget: true</li>
+					<li>fadeTarget:
+						<ul>
+							<li>fade: true</li>
+							<li>speed: slow</li>
+						</ul>
+					</li>
+				</ul>
+			</p>
+			<p>The output is hidden until the input box has focus, at which point it fades in, and it fades out when the textbox loses focus.  This one also uses the new targetStyle introduced
+			in version 2.3.0 to allow the default target rendered at runtime to be styled.</p>
+<pre>
+&lt;input id="textbox4" style="width: 100%;" /&gt;
+&lt;script type="text/javascript"&gt;
+	$().ready(function(){
+		$('#textbox4').remainingCharacters({
+			maxChars: 140,
+			hideTarget: true,
+			fadeTarget: {
+				fade: true,
+				speed: 'slow'
+			},
+			targetStyle: 'width: 100%; text-align: left; font-weight: bold; color: red;'
+		});
+&lt;/script&gt;
+
+</pre>
+			<input id="textbox4" style="width: 100%;" />
+		</div>
+		<div id="footer">Version 2.3.0</div>
 	</div>
 </div>
 <script type="text/javascript">
@@ -89,6 +159,22 @@
 				fade: true,
 				speed: 'slow'
 			}
+		});
+		$('#textbox3').remainingCharacters({
+			maxChars: 140,
+			hideTarget: true,
+			fadeTarget: {
+				fade: true,
+				speed: 'slow'
+			}
+		});$('#textbox4').remainingCharacters({
+			maxChars: 140,
+			hideTarget: true,
+			fadeTarget: {
+				fade: true,
+				speed: 'slow'
+			},
+			targetStyle: 'width: 100%; text-align: left; font-weight: bold; color: red;'
 		});
 	});
 </script>
