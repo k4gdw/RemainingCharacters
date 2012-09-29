@@ -42,3 +42,5 @@ NuGet
 # build script local files
 build/buildinfo.properties
 build/config/buildinfo.properties
+_ReSharper.jQuery.remainingCharacters/
+jQuery.remainingCharacters.v11.suo
