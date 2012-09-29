@@ -17,8 +17,7 @@ This html snippet shows how to apply the plugin to a `<textarea>` element:
     			    maxChars: 140,
     			    hideTarget: true,
     			    fadeTarget: {
-    				    fade: true,
-    				    speed: 'slow'
+    				    speed: 'slow' //defaults to 'fast'
     			    }
     		      });
     	        });
@@ -35,7 +34,12 @@ It's been tested against [jQuery](http://jquery.com/) 1.8.2 and **IT WORKS ON MY
 v2.3.1
 ------
 Fixed some JSHint messages and updated the README.md file to reflect the fact
-it has now been tested against jQuery 1.8.2.
+it has now been tested against jQuery 1.8.2.  Cleaned up the default styling for
+the inserted default `<div>`.  Got rid of the `fade: true` portion of the
+`fadeTarget` configuration object.  Now, if the `fadeTarget` is there, `fade`
+is assumed to be true. So now, if all you need is `fadeTarget {}` to have it
+fade fast.  `fadeTarget {speed: 'slow'}` makes it fade slow.  If you want
+the code to be more explicit, you can use `fadeTarget {speed: 'fast'}`.
 
 v2.3.0
 ------
