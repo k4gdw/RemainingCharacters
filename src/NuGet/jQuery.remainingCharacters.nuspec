@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <version>2.3.1</version>
+    <version>2.3.2</version>
     <authors>Bryan Johns (K4GDW)</authors>
     <owners>K4GDW Software</owners>
     <licenseUrl>http://github.com/k4gdw/jQuery.remainingCharacters/wiki/License</licenseUrl>
@@ -23,13 +23,7 @@
       me a useful product, I welcome any pointers or suggestions.
     </summary>
     <releaseNotes>
-      Fixed some JSHint messages and updated the README.md file to reflect the fact
-      it has now been tested against jQuery 1.8.2.  Cleaned up the default styling for
-      the inserted default &lt;div&gt;.  Got rid of the `fade: true` portion of the
-      `fadeTarget` configuration object.  Now, if the `fadeTarget` is there, `fade`
-      is assumed to be true. So now, if all you need is `fadeTarget {}` to have it
-      fade fast.  `fadeTarget {speed: 'slow'}` makes it fade slow.  If you want
-      the code to be more explicit, you can use `fadeTarget {speed: 'fast'}`.
+      Fixed an error in the version numbers.
     </releaseNotes>
     <copyright>Copyright 2012</copyright>
     <tags>jQuery Plugin</tags>

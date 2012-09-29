@@ -3,12 +3,10 @@
 * You should not use this file at runtime inside the browser--it is only
 * intended to be used only for design-time IntelliSense.  Please use the
 * standard jQuery library for all production use.
-*
-* Comment version: 2.3.1
 */
 
 /*
-* remainingCharacters JavaScript Library v2.3.1
+* remainingCharacters JavaScript Library v2.3.2
 * http://github.com/k4gdw/jQuery.remainingCharacters
 *
 * Copyright 2012 K4GDW Software. All rights reserved.
