@@ -80,7 +80,7 @@ p{
 }
 
 .target {
-	width: 90%;
+	width: 100%;
 	position: relative;
 	text-align: right;
 	margin-left: auto;
@@ -117,17 +117,6 @@ footer {
 	max-width: 75%;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-ul.options {
-	padding: 10px;
-	list-style-type: none;
-}
-
-ul.options ul {
-	padding-left: 35px;
-	list-style-type: none;
-
 }
 
 pre.code {

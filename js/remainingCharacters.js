@@ -1,5 +1,5 @@
 /*
-* remainingCharacters JavaScript Library v2.3.2
+* remainingCharacters JavaScript Library v2.3.3
 * http://github.com/k4gdw/jQuery.remainingCharacters
 *
 * Copyright 2012 K4GDW Software. All rights reserved.
@@ -42,7 +42,7 @@
         var fadeTarget;
         var fadeSpeed;
         if (args.fadeTarget) {
-            fadeTarget = args.fadeTarget.fade || false;
+            fadeTarget = true;
             fadeSpeed = args.fadeTarget.speed || 'fast';
         }
         if (hideTarget) {
