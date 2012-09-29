@@ -31,11 +31,14 @@
 (function ($) {
     $.fn.remainingCharacters = function (args) {
         var targetWidth = $(this).outerWidth();
-        var targetStyle = args.targetStyle || 'width: ' + targetWidth + 'px; text-align: right; clear: both;';
+        var targetStyle = args.targetStyle || 'width: 100%; text-align: right; clear: both;';
         var target = args.target || $('<div>', {
             id: 'rcOutput',
             style: targetStyle
         }).insertBefore(this);
+        $('this').resize(function () {
+            $('#rcOutput').resize($('this').width);
+        });
         var maxChars = args.maxChars;
         var hideTarget = args.hideTarget || false;
         var current = this.val() || '';
