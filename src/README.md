@@ -5,16 +5,14 @@ This html snippet shows how to apply the plugin to a `<textarea>` element:
 
         <html>
             <head>
-                <script src='jQuery.1.7.1.js' type='text/javascript'></script>
+                <script src='jQuery-1.8.2.js' type='text/javascript'></script>
             <script src='remainingCharacters.js' type='text/javascript'></script>
         </head>
         <body>
-            <div id="charsLeftTarget"></div>
             <textarea id="charsLeft"></textarea>
             <script type="text/javascript">
     	        $().ready(function(){
     		        $('#charsLeft').remainingCharacters({
-    			    target: output,
     			    targetStyle: 'whatever css you want',
     			    maxChars: 140,
     			    hideTarget: true,
@@ -28,11 +26,16 @@ This html snippet shows how to apply the plugin to a `<textarea>` element:
         </body>
     </html>
    
-It's been tested against [jQuery](http://jquery.com/) 1.7.1 and **IT WORKS ON MY MACHINE**.  If you find a bug, please submit an issue.  If you know how to  fix an issue feel free to  fork it and  submit  a pull request.   I'll gladly check it out and merge your code if it's appropriate.
+It's been tested against [jQuery](http://jquery.com/) 1.8.2 and **IT WORKS ON MY MACHINE**.  If you find a bug, please submit an issue.  If you know how to  fix an issue feel free to  fork it and  submit  a pull request.   I'll gladly check it out and merge your code if it's appropriate.
 
 #CHANGE HISTORY
 
 **TODO:**  Figure out how to generate the output as a floating `<div>` with an absolute position relative to the textbox so that it is outside the regular page flow, allowing so that the `<input>` or `<textarea>` it's applied to doesn't jump around when the output `<div>` visibility is toggled.
+
+v2.3.1
+------
+Fixed some JSHint messages and updated the README.md file to reflect the fact
+it has now been tested against jQuery 1.8.2.
 
 v2.3.0
 ------

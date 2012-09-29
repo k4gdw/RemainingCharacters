@@ -1,5 +1,5 @@
 /*
-* remainingCharacters JavaScript Library v2.3.0
+* remainingCharacters JavaScript Library v2.3.1
 * http://github.com/k4gdw/jQuery.remainingCharacters
 *
 * Copyright 2012 K4GDW Software. All rights reserved.
@@ -30,53 +30,53 @@
 */
 (function ($) {
     $.fn.remainingCharacters = function (args) {
-		var targetWidth = $(this).outerWidth();
-		var targetStyle = args.targetStyle || 'width: ' + targetWidth + 'px; text-align: right;';
-    	var target = args.target || $('<div>', {
-    			id: 'rcOutput',
-    			style: targetStyle
-    		}).insertBefore(this);
-    	var maxChars = args.maxChars;
-    	var hideTarget = args.hideTarget || false;
-    	var current = this.val() || '';
-    	var fadeTarget;
-    	var fadeSpeed;
-    	if(args.fadeTarget){
-    		fadeTarget = args.fadeTarget.fade || false;
-    		fadeSpeed = args.fadeTarget.speed || 'fast';
-    	}
-    	if (hideTarget){
-    		$(target).hide();	
-    	}
-    	$(target).html((maxChars - current.length) + ' characters remaining.');
-        this.keyup(function() {
+        var targetWidth = $(this).outerWidth();
+        var targetStyle = args.targetStyle || 'width: ' + targetWidth + 'px; text-align: right; clear: both;';
+        var target = args.target || $('<div>', {
+            id: 'rcOutput',
+            style: targetStyle
+        }).insertBefore(this);
+        var maxChars = args.maxChars;
+        var hideTarget = args.hideTarget || false;
+        var current = this.val() || '';
+        var fadeTarget;
+        var fadeSpeed;
+        if (args.fadeTarget) {
+            fadeTarget = true;
+            fadeSpeed = args.fadeTarget.speed || 'fast';
+        }
+        if (hideTarget) {
+            $(target).hide();
+        }
+        $(target).html((maxChars - current.length) + ' characters remaining.');
+        this.keyup(function () {
             $(target).html((maxChars - this.value.length) + ' characters remaining.');
-        }).keydown(function(e) {
-        	if (this.value.length > (maxChars - 1)) {
-				if (((e.keyCode >= 48) && (e.keyCode <= 111))
-						|| ((e.keyCode >= 186) && (e.keyCode <= 222)) 
-							|| e.keyCode == 32
-								|| ((e.keyCode == 13) && (this.tagName == 'TEXTAREA'))) {
-						return false;
-					}
-				}
-				return true;
-        	}).focus(function(){        		
-        		if (fadeTarget){
-        			$(target).fadeIn(fadeSpeed);
-        			$(target).html((maxChars - this.value.length) + ' characters remaining.');
-	        	} else {
-	        		$(target).show();
-	        	}
-        	}).blur(function(){
-        		if (hideTarget){
-        			if (fadeTarget){
-        				$(target).fadeOut(fadeSpeed);
-	        		} else {
-	        			$(target).hide();
-	        		}
-        		}
-        	});	
+        }).keydown(function (e) {
+            if (this.value.length > (maxChars - 1)) {
+                if (((e.keyCode >= 48) && (e.keyCode <= 111))
+						|| ((e.keyCode >= 186) && (e.keyCode <= 222))
+							|| e.keyCode === 32
+								|| ((e.keyCode === 13) && (this.tagName === 'TEXTAREA'))) {
+                    return false;
+                }
+            }
+            return true;
+        }).focus(function () {
+            if (fadeTarget) {
+                $(target).fadeIn(fadeSpeed);
+                $(target).html((maxChars - this.value.length) + ' characters remaining.');
+            } else {
+                $(target).show();
+            }
+        }).blur(function () {
+            if (hideTarget) {
+                if (fadeTarget) {
+                    $(target).fadeOut(fadeSpeed);
+                } else {
+                    $(target).hide();
+                }
+            }
+        });
         return this;
-	};
-})( jQuery );
+    };
+})(jQuery);

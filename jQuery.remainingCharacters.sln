@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4AD87523-2BFE-4FC0-BC6F-080E7A609F7B}"
+	ProjectSection(SolutionItems) = preProject
+		src\files.xml = src\files.xml
+		src\LICENSE = src\LICENSE
+		src\README.md = src\README.md
+		src\remainingCharacters.intellisense.js = src\remainingCharacters.intellisense.js
+		src\remainingCharacters.js = src\remainingCharacters.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{CF00BFF2-F13A-4480-B9B3-60C73FB7499E}"
+	ProjectSection(SolutionItems) = preProject
+		src\NuGet\jQuery.remainingCharacters.nuspec = src\NuGet\jQuery.remainingCharacters.nuspec
+		src\NuGet\pack.bat = src\NuGet\pack.bat
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "screenshots", "screenshots", "{A9CEF9E0-D9EC-4F07-9FDE-7A0C3BF56461}"
+	ProjectSection(SolutionItems) = preProject
+		src\screenshots\intellisensefubar.png = src\screenshots\intellisensefubar.png
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "testHarness", "testHarness\", "{81CC4B4E-AFC7-424D-97BB-173F67BA75CD}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/testHarness"
+		Debug.AspNetCompiler.PhysicalPath = "testHarness\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\testHarness\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/testHarness"
+		Release.AspNetCompiler.PhysicalPath = "testHarness\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\testHarness\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "7214"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81CC4B4E-AFC7-424D-97BB-173F67BA75CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81CC4B4E-AFC7-424D-97BB-173F67BA75CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CF00BFF2-F13A-4480-B9B3-60C73FB7499E} = {4AD87523-2BFE-4FC0-BC6F-080E7A609F7B}
+		{A9CEF9E0-D9EC-4F07-9FDE-7A0C3BF56461} = {4AD87523-2BFE-4FC0-BC6F-080E7A609F7B}
+	EndGlobalSection
+EndGlobal
