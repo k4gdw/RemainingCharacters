@@ -31,6 +31,10 @@ It's been tested against [jQuery](http://jquery.com/) 1.8.2 and **IT WORKS ON MY
 
 **TODO:**  Figure out how to generate the output as a floating `<div>` with an absolute position relative to the textbox so that it is outside the regular page flow, allowing so that the `<input>` or `<textarea>` it's applied to doesn't jump around when the output `<div>` visibility is toggled.
 
+v2.3.3
+------
+Fixed a typo that broke the fadeing.
+
 v2.3.2
 ------
 Fixed an error in the version numbers.

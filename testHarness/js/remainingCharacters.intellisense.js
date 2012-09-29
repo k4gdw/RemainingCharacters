@@ -6,7 +6,7 @@
 */
 
 /*
-* remainingCharacters JavaScript Library v2.3.2
+* remainingCharacters JavaScript Library v2.3.3
 * http://github.com/k4gdw/jQuery.remainingCharacters
 *
 * Copyright 2012 K4GDW Software. All rights reserved.
@@ -67,7 +67,7 @@
         ///						    any value supported by jQuery's .fadeOut.  
         /// </summary>
         var targetWidth = $(this).outerWidth();
-        var targetStyle = args.targetStyle || 'width: ' + targetWidth + 'px; text-align: right; clear: both;';
+        var targetStyle = args.targetStyle || 'width: 100%; text-align: right; clear: both;';
         var target = args.target || $('<div>', {
             id: 'rcOutput',
             style: targetStyle
