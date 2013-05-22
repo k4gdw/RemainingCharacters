@@ -1,4 +1,4 @@
 [Pp]ackage/
 *.nupkg
-jQuery.remainingCharacters.v11.suo
-_ReSharper.jQuery.remainingCharacters/
+*.suo
+_ReSharper*/

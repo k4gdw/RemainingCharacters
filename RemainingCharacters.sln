@@ -5,15 +5,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4AD87523-2BF
 	ProjectSection(SolutionItems) = preProject
 		src\files.xml = src\files.xml
 		src\LICENSE = src\LICENSE
-		src\README.md = src\README.md
 		src\remainingCharacters.intellisense.js = src\remainingCharacters.intellisense.js
 		src\remainingCharacters.js = src\remainingCharacters.js
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{CF00BFF2-F13A-4480-B9B3-60C73FB7499E}"
 	ProjectSection(SolutionItems) = preProject
-		src\NuGet\jQuery.remainingCharacters.nuspec = src\NuGet\jQuery.remainingCharacters.nuspec
 		src\NuGet\pack.bat = src\NuGet\pack.bat
+		src\NuGet\RemainingCharacters.nuspec = src\NuGet\RemainingCharacters.nuspec
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "screenshots", "screenshots", "{A9CEF9E0-D9EC-4F07-9FDE-7A0C3BF56461}"
@@ -39,6 +38,11 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "testHarness", "testHarness\
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "7214"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7DE3532D-D543-491B-82D0-C3AED44DDE85}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
