@@ -11,8 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4AD87523-2BF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{CF00BFF2-F13A-4480-B9B3-60C73FB7499E}"
 	ProjectSection(SolutionItems) = preProject
+		src\NuGet\jQuery.remainingCharacters.nuspec = src\NuGet\jQuery.remainingCharacters.nuspec
 		src\NuGet\pack.bat = src\NuGet\pack.bat
-		src\NuGet\RemainingCharacters.nuspec = src\NuGet\RemainingCharacters.nuspec
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "screenshots", "screenshots", "{A9CEF9E0-D9EC-4F07-9FDE-7A0C3BF56461}"
