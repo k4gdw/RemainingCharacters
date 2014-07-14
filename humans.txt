@@ -3,13 +3,13 @@
 
 
 /* TEAM */
-  <your title>: <your name>
-  Site:
-  Twitter:
-  Location:
+  Author:   Bryan Johns, k4gdw@bryanjohns.com, bjohns@greendragonweb.com
+  Site:     http://k4gdw.us/aBsimU
+  Twitter:  http://k4gdw.us/1wmW5uw
+  Location: Montgomery, Alabama, USA (http://k4gdw.us/1wmWJIx)
 
 /* THANKS */
-  Names (& URL):
+  Names (& URL):    
 
 /* SITE */
   Standards: HTML5, CSS3

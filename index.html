@@ -2,141 +2,144 @@
 <html>
 
 <head>
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-	<title>jQuery.remainingCharacters</title>
-	<link href="css/site.css" rel="stylesheet" type="text/css" />
-	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-	<script type="text/javascript">
-		if (typeof jQuery == 'undefined')
-		{
-			document.write(unescape("%3Cscript src='js/jquery-1.7.1.min.js' type='text/javascript'%3E%3C/script%3E"));
-		}
-	</script>
-	<script src="js/remainingCharacters.js" type="text/javascript"></script>
-	</head>
-
+     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+     <title>jQuery.remainingCharacters</title>
+     <link href="css/site.css" rel="stylesheet" type="text/css" />
+</head>
 <body>
-<div id="wrapper">
-	<header>
-		<h1>jQuery.remainingCharacters</h1>
-		<p>
-		The easiest way to install the plugin is to use
-		<a href="http://nuget.org">NuGet</a>. In Visual Studio, simply use the following 
-		command in the Package Manager Console.</p>
-		<pre class="code">Install-Package jQuery.remainingCharacters</pre>
-	</header>
-	<section id="main">
-		<div class="demo">
-			<p>
-			This is the way it works with minimum configuration.&nbsp; 
-			The only truly mandatory configuration property is&nbsp; the maximum 
-			number of characters.</p>
-			<pre class="code">
-&lt;div id="output" class="target"&lt;&gt;/div&gt;
-&lt;input id="textbox" style="width: 100%;" /&gt;
-&lt;script type="text/javascript"&gt;
-	$().ready(function(){
-		$('#textbox').remainingCharacters({
-			maxChars: 140
-		});
-&lt;/script&gt;
-			</pre>
-			<input id="textbox1" style="width: 100%;" /> </div>
-		<div class="demo">
-			<p>
-			This shows how the plugin works with 
-			some of the optional parameters set.&nbsp; Setting hideTarget to 
-			true makes the target element hidden by default until the textbox 
-			receives focus.&nbsp; The fadeTarget is a javascript object that 
-			contains two sub-properties, fade and speed.&nbsp; Set the fade 
-			property to true to enable the jquery.fade transition.&nbsp; The 
-			speed property is self-explanatory.&nbsp; The target property is 
-			only required if you want to specify a specific html element to 
-			receive the number of characters remaining.</p>
-			<pre class="code">
-&lt;div id="output2" class="target"&gt;&lt;/div&gt;
-&lt;input id="textbox2" style="width: 100%;" /&gt;
-&lt;script type="text/javascript"&gt;
-	$().ready(function(){
-		$('#textbox2').remainingCharacters({
-			target: $('#output2'),
-			maxChars: 140,
-			hideTarget: true,
-			fadeTarget: {speed: 'slow'}
-		});
-&lt;/script&gt;
-		</pre>
-		<div id="output2" class="target"></div>
-		<input id="textbox2" style="width: 100%;" />
-		</div>
-		<div class="demo">
-			<p>
-			This shows how the plugin works with the optional parameters set and the output rendered at run time in a &lt;div&gt; instead of being specified at design 
-			time and hidden until the textbox gets focus.&nbsp; It is also set 
-			of fade in and out slowly.</p>
-			<pre class="code">
-&lt;input id="textbox3" style="width: 100%;" /&gt;
-&lt;script type="text/javascript"&gt;
-	$().ready(function(){
-		$('#textbox3').remainingCharacters({
-			maxChars: 140,
-			hideTarget: true,
-			fadeTarget: {speed: 'slow'}
-	});
-&lt;/script&gt;
-			</pre>
-			<input id="textbox3" style="width: 100%;" />
-		</div>
-		<div class="demo">
-			<p>
-			This shows how the plugin works with the optional parameters set and 
-			the output rendered at run time in a span instead of being specified 
-			at design time.&nbsp; The only difference between this on and the 
-			previous example is that it also uses the targetStyle property to 
-			specify the css styles to be applied to the &lt;div&gt; that is rendered 
-			at runtime.</p>
-			<pre class="code" style="overflow-x: scroll;">
-&lt;input id="textbox4" style="width: 100%;" /&gt;
-&lt;script type="text/javascript"&gt;
-	$().ready(function(){
-		$('#textbox4').remainingCharacters({
-			maxChars: 140,
-			hideTarget: true,
-			fadeTarget: {speed: 'fast'},// speed: fast the the default so this will also work fadeTarget: {}
-			targetStyle: 'width: 100%; text-align: left; font-weight: bold; color: red;'
-		});
-&lt;/script&gt;
-			</pre>
-			<input id="textbox4" style="width: 100%;" />
-		</div>
-	</section>
-	<footer>Version 2.3.0</footer>
-</div>
-<script type="text/javascript">
-
-	$().ready(function(){
-		$('#textbox1').remainingCharacters({
-			maxChars: 140
-		});
-		$('#textbox2').remainingCharacters({
-			target: $('#output2'),
-			maxChars: 140,
-			hideTarget: true,
-			fadeTarget: {speed: 'slow'}
-		});
-		$('#textbox3').remainingCharacters({
-			maxChars: 140,
-			hideTarget: true,
-			fadeTarget: {speed: 'slow'}
-		});$('#textbox4').remainingCharacters({
-			maxChars: 140,
-			hideTarget: true,
-			fadeTarget: {},
-			targetStyle: 'width: 100%; text-align: left; font-weight: bold; color: red;'
-		});
-	});
-</script>
-
+    <div id="wrapper">
+     <header>
+          <h1>Live Edit Test jQuery.remainingCharacters</h1>
+          <p>
+          The easiest way to install the plugin is to use
+          <a href="http://nuget.org">NuGet</a>. In Visual Studio, simply use the following 
+          command in the Package Manager Console.</p>
+          <pre class="code">Install-Package jQuery.remainingCharacters</pre>
+     </header>
+        <section id="main">
+            <div class="demo">
+                <p>
+                    This is the way it works with minimum configuration.
+                    The only truly mandatory configuration property is the maximum
+                    number of characters.
+                </p>
+                <pre class="code">
+    &lt;div id="output" class="target"&lt;&gt;/div&gt;
+    &lt;input id="textbox" style="width: 100%;" /&gt;
+    &lt;script type="text/javascript"&gt;
+     $().ready(function(){
+          $('#textbox').remainingCharacters({
+               maxChars: 140
+          });
+    &lt;/script&gt;
+               </pre>
+                <input id="textbox1" style="width: 100%;" />
+            </div>
+            <div class="demo">
+                <p>
+                    This shows how the plugin works with some of the optional parameters
+                    set. Setting <span class="code">hideTarget</span> to <span class="code">true</span>
+                    makes the <span class="code">target</span> element hidden by default
+                    until the textbox receives focus. The <span class="code">fadeTarget</span> property is a
+                    javascript object that contains two sub-properties, <span class="code">fade</span> and
+                    <span class="code">speed</span>. Setting the <span class="code">fade</span> property to
+                    <span class="code">true</span> enables the <span class="code">jquery.fade</span>
+                    transition. The speed property is self-explanatory. The <span class="code">target</span>
+                    property is only required if you want to specify a particular html
+                    element to receive the number of characters remaining.
+                </p>
+                <pre class="code">
+    &lt;div id="output2" class="target"&gt;&lt;/div&gt;
+    &lt;input id="textbox2" style="width: 100%;" /&gt;
+    &lt;script type="text/javascript"&gt;
+     $().ready(function(){
+          $('#textbox2').remainingCharacters({
+               target: $('#output2'),
+               maxChars: 140,
+               hideTarget: true,
+               fadeTarget: {speed: 'slow'}
+          });
+    &lt;/script&gt;
+          </pre>
+                <div id="output2" class="target"></div>
+                <input id="textbox2" style="width: 100%;" />
+            </div>
+            <div class="demo">
+                <p>
+                    This shows how the plugin works with the optional parameters set
+                    and the output rendered at run time in a &lt;div&gt; instead of
+                    being specified at design time and hidden until the textbox gets
+                    focus. It is also set to fade in and out slowly.
+                </p>
+                <pre class="code">
+    &lt;input id="textbox3" style="width: 100%;" /&gt;
+    &lt;script type="text/javascript"&gt;
+     $().ready(function(){
+          $('#textbox3').remainingCharacters({
+               maxChars: 140,
+               hideTarget: true,
+               fadeTarget: {speed: 'slow'}
+     });
+    &lt;/script&gt;
+               </pre>
+                <input id="textbox3" style="width: 100%;" />
+            </div>
+            <div class="demo">
+                <p>
+                    This shows how the plugin works with the optional parameters set and
+                    the output rendered at run time in a span instead of being specified
+                    at design time. The only difference between this on and the
+                    previous example is that it also uses the targetStyle property to
+                    specify the css styles to be applied to the &lt;div&gt; that is rendered
+                    at runtime.
+                </p>
+                <pre class="code" style="overflow-x: scroll;">
+    &lt;input id="textbox4" style="width: 100%;" /&gt;
+    &lt;script type="text/javascript"&gt;
+     $().ready(function(){
+          $('#textbox4').remainingCharacters({
+               maxChars: 140,
+               hideTarget: true,
+               fadeTarget: {speed: 'fast'},// speed: fast the the default so this will also work fadeTarget: {}
+               targetStyle: 'width: 100%; text-align: left; font-weight: bold; color: red;'
+          });
+    &lt;/script&gt;
+               </pre>
+                <input id="textbox4" style="width: 100%;" />
+            </div>
+        </section>
+     <footer>Version 2.3.0</footer>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript">
+        if (typeof jQuery == 'undefined') {
+            document.write(unescape("%3Cscript src='js/jquery-1.7.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+        }
+    </script>
+    <script src="js/remainingCharacters.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    
+     $().ready(function(){
+          $('#textbox1').remainingCharacters({
+               maxChars: 140
+          });
+          $('#textbox2').remainingCharacters({
+               target: $('#output2'),
+               maxChars: 140,
+               hideTarget: true,
+               fadeTarget: {speed: 'slow'}
+          });
+          $('#textbox3').remainingCharacters({
+               maxChars: 140,
+               hideTarget: true,
+               fadeTarget: {speed: 'slow'}
+          });$('#textbox4').remainingCharacters({
+               maxChars: 140,
+               hideTarget: true,
+               fadeTarget: {},
+               targetStyle: 'width: 100%; text-align: left; font-weight: bold; color: red;'
+          });
+     });
+    </script>
 </body>
-
 </html>
